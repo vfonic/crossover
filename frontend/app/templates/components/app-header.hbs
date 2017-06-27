@@ -3,35 +3,20 @@
     <div class="top-bar-left">
       <ul class="menu">
         <li class="menu-text">
-          <a href="#">
-            <img src="{{root}}assets/img/logo.png">
-          </a>
+          {{#link-to 'app'}}
+            Crossover
+          {{/link-to}}
         </li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="dropdown menu" data-dropdown-menu data-click-open="true">
-        <li><a href="#0">{{title}} Title 1</a></li>
         <li>
-          <a href="#0" class="is-active">Title 2</a>
-          <ul class="menu">
-            <li><a href='#0' title="Submenu 1">Submenu 1</a></li>
-            <li><a href='#0' title="Submenu 2">Submenu 2</a></li>
-            <li>
-              <a href='#0' class="is-active" title="Submenu 3">Submenu 3</a>
-              <ul class='menu'>
-                <li><a href='#0' title="Submenu 1">Submenu 1</a></li>
-                <li><a href='#0' title="Submenu 2">Submenu 2</a></li>
-                <li><a href='#0' title="Submenu 3">Submenu 3</a></li>
-              </ul>
-            </li>
-          </ul>
+          {{#link-to 'app.tickets'}}
+            My tickets
+          {{/link-to}}
         </li>
-        <li><a href="#0">Title 3</a></li>
-        <li><a href="#0">Title 4</a></li>
-        <li><a href="#0">Title 5</a></li>
-        <li><a href="#0">Title 6</a></li>
-        <li><a href="#0">Title 7</a></li>
+        <li>
+          {{#link-to 'app.tickets/new'}}
+            New ticket
+          {{/link-to}}
+        </li>
       </ul>
     </div>
   </div>

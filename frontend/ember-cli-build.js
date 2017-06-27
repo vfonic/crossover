@@ -4,39 +4,6 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-    'ember-cli-foundation-6-sass': {
-      'foundationJs': 'all',
-      // 'foundationJs': [
-      //   'core',
-      //   'util.box',
-      //   'util.keyboard',
-      //   'util.mediaQuery',
-      //   'util.motion',
-      //   'util.nest',
-      //   'util.timerAndImageLoader',
-      //   'util.touch',
-      //   'util.triggers',
-      //   'abide',
-      //   'accordion',
-      //   'accordionMenu',
-      //   'drilldown',
-      //   'dropdown',
-      //   'dropdownMenu',
-      //   'equalizer',
-      //   'interchange',
-      //   'magellan',
-      //   'offcanvas',
-      //   'orbit',
-      //   'responsiveMenu',
-      //   'responsiveToggle',
-      //   'reveal',
-      //   'slider',
-      //   'sticky',
-      //   'tabs',
-      //   'toggler',
-      //   'tooltip'
-      // ],
-    },
   });
 
   // Use `app.import` to add additional libraries to the generated

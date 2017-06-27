@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627094944) do
+ActiveRecord::Schema.define(version: 20170627101034) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20170627094944) do
     t.index ["authentication_token"], name: "index_admins_on_authentication_token", using: :btree
     t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "tickets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.text     "description", limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["user_id"], name: "index_tickets_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

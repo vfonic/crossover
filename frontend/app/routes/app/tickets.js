@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return ['asd', 'dsa'];
+    return this.get('store').findAll('ticket');
   }
 });

@@ -14,7 +14,9 @@ Router.map(function() {
   });
 
   this.route('app', { path: '/' }, function() {
-    this.route('tickets');
+    this.route('tickets', function() {
+      this.route('new');
+    });
     this.route('login');
     this.route('logout');
   });

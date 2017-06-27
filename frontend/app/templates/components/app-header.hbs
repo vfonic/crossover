@@ -1,24 +1,15 @@
-<header class="header top-bar">
-  <div class="row">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">
-          {{#link-to 'app'}}
-            Crossover
-          {{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'app.tickets'}}
-            My tickets
-          {{/link-to}}
-        </li>
-        <li>
-          {{#link-to 'app.tickets/new'}}
-            New ticket
-          {{/link-to}}
-        </li>
-      </ul>
-    </div>
+<div class="menu">
+  {{#link-to 'app'}}
+    <h1>
+      <em>Crossover</em>
+    </h1>
+  {{/link-to}}
+  <div class="links">
+    {{#link-to 'app.tickets'}}
+      My tickets
+    {{/link-to}}
+    {{#link-to 'app.tickets.new'}}
+      New ticket
+    {{/link-to}}
   </div>
-</header>
-
+</div>

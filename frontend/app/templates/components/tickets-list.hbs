@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ul>
+  {{#each tickets as |ticket|}}
+    <li {{action "showPerson" person}}>{{ticket}}</li>
+  {{/each}}
+</ul>

@@ -1,5 +1,8 @@
 module Api
   class TicketsController < ApplicationController
+
+    before_action :authenticate_user!
+
     before_action :set_ticket, only: [:update, :destroy]
 
     # GET /tickets

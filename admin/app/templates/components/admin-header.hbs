@@ -1,0 +1,20 @@
+<div class="menu">
+  {{#link-to 'app'}}
+    <h1>
+      <em>Crossover</em>
+    </h1>
+  {{/link-to}}
+  <div class="links">
+    {{#if session.isAuthenticated}}
+      {{#link-to 'app.tickets'}}
+        My tickets
+      {{/link-to}}
+      {{#link-to 'app.tickets.new'}}
+        New ticket
+      {{/link-to}}
+      <a href="#" {{action 'logout'}}>Logout {{currentUser.user.email}}</a>
+    {{else}}
+      {{#link-to 'app.login'}}Login{{/link-to}}
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>
+    We hope you find exactly what you're looking for in a place to stay.
+  </p>
+
+  {{#if session.isAuthenticated}}
+    {{#link-to 'app.tickets.new' class="button"}}New ticket{{/link-to}}
+  {{else}}
+    {{#link-to 'app.login' class="button"}}New ticket{{/link-to}}
+  {{/if}}
+</div>
+
+{{outlet}}

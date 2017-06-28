@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "*"
+    },
     modulePrefix: 'admin',
     environment: environment,
     rootURL: '/admin',
@@ -44,6 +47,12 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+  }
+
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'admin.login',
+    routeAfterAuthentication: 'admin.tickets',
+    routeIfAlreadyAuthenticated: 'admin.tickets'
   }
 
   return ENV;

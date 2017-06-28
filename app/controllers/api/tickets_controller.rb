@@ -1,26 +1,12 @@
 module Api
   class TicketsController < ApplicationController
-    before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+    before_action :set_ticket, only: [:update, :destroy]
 
     # GET /tickets
     # GET /tickets.json
     def index
       @tickets = Ticket.all
       render json: @tickets
-    end
-
-    # GET /tickets/1
-    # GET /tickets/1.json
-    def show
-    end
-
-    # GET /tickets/new
-    def new
-      @ticket = Ticket.new
-    end
-
-    # GET /tickets/1/edit
-    def edit
     end
 
     # POST /tickets
@@ -42,14 +28,10 @@ module Api
     # PATCH/PUT /tickets/1
     # PATCH/PUT /tickets/1.json
     def update
-      respond_to do |format|
-        if @ticket.update(ticket_params)
-          format.html { redirect_to @ticket, notice: 'Ticket was successfully updated.' }
-          format.json { render :show, status: :ok, location: @ticket }
-        else
-          format.html { render :edit }
-          format.json { render json: @ticket.errors, status: :unprocessable_entity }
-        end
+      if @ticket.update(ticket_params)
+        render json: @ticket, status: :ok
+      else
+        render json: @ticket.errors, status: :unprocessable_entity
       end
     end
 
@@ -71,7 +53,8 @@ module Api
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def ticket_params
-        params.require(:ticket).permit(:title, :description)
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params, only: [:title, :description, :status])
+        # params.require(:ticket).permit(:title, :description, :status)
       end
   end
 end

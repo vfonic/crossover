@@ -1,5 +1,5 @@
 <div class="container">
-  {{app-header}}
+  {{app-header isAuthenticated=session.isAuthenticated logout=(action 'logout')}}
   <div class="body">
     {{outlet}}
   </div>

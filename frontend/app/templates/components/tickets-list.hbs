@@ -1,8 +1,11 @@
 {{#each tickets as |ticket|}}
-  <article class="listing">
+  <article class="listing" {{action 'toggleStatus' ticket}}>
     <h3>{{ticket.title}}</h3>
     <div class="detail">
       {{ticket.description}}
+    </div>
+    <div class="detail">
+      Status: {{ticket.status}}
     </div>
   </article>
 {{/each}}

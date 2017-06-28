@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('app', { path: '/' }, function() {
     this.route('tickets', function() {
       this.route('new');
+      this.route('show');
     });
     this.route('login');
     this.route('logout');

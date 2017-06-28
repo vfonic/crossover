@@ -6,6 +6,7 @@ module Api
     # GET /tickets.json
     def index
       @tickets = Ticket.all
+      render json: @tickets
     end
 
     # GET /tickets/1

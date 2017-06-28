@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
   mount_ember_app :frontend, to: "/"
+  mount_ember_app :admin, to: "/admin"
 end

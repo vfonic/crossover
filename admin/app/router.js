@@ -7,13 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('app', { path: '/' }, function() {
+  this.route('admin', { path: '/admin' }, function() {
     this.route('tickets', function() {
-      this.route('new');
+      this.route('show');
+    });
+    this.route('reports', function() {
       this.route('show', { path: '/:id' });
     });
-    this.route('login');
-    this.route('logout');
+    this.route('users', function() {
+      this.route('show', { path: '/:id' });
+    });
   });
 });
 

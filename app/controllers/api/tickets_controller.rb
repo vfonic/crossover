@@ -7,7 +7,6 @@ module Api
 
     def index
       @tickets = current_user.tickets
-      @tickets = Ticket.all
       render jsonapi: @tickets
     end
 

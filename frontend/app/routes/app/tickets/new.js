@@ -10,6 +10,9 @@ export default Ember.Route.extend({
       newTicket.save().then(() => this.transitionTo('app.tickets')).catch((reason) => {
         this.set('errorMessage', reason.error);
       });
+    },
+    willTransition() {
+      this.controller.get('model').rollbackAttributes();
     }
   }
 });

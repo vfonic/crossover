@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include ActionController::MimeResponds
+
   # protect_from_forgery with: :exception
 
   before_action :authenticate_user_from_token!

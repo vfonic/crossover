@@ -114,7 +114,8 @@ p {
     bottom: 5px;
 }
 
-.list-filter input {
+.list-filter input,
+.list-filter textarea {
     padding: 11px;
     font-size: 18px;
     /*width: 500px;
@@ -206,15 +207,10 @@ p {
 
 .listing {
     margin-top: 15px;
-    background-color: #f6f6f6;
     padding: 15px 50px;
     min-height: 145px;
     position: relative;
-}
-
-.listing:hover {
     background-color: #f3f3f3;
-    cursor: pointer;
 }
 
 .listing img {

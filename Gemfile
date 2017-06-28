@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "ember-cli-rails"
 gem 'devise'
+gem 'rack-cors', require: 'rack/cors'

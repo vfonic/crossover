@@ -1,6 +1,6 @@
 {{#if tickets}}
   {{#each tickets as |ticket|}}
-    <article class="listing" {{action 'toggleStatus' ticket}}>
+    <article class="listing">
       <h3>{{ticket.title}}</h3>
       <div class="detail">
         {{ticket.description}}

@@ -50,6 +50,7 @@ module.exports = function(environment) {
   }
 
   ENV['ember-simple-auth'] = {
+    authenticationRoute: 'app.login',
     routeAfterAuthentication: 'app.tickets',
     routeIfAlreadyAuthenticated: 'app.tickets'
   }

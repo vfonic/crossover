@@ -27,5 +27,7 @@ module Crossover
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
+    config.api_only = true
+    config.middleware.use ActionDispatch::Flash
   end
 end

@@ -11,5 +11,11 @@
     {{#link-to 'app.tickets.new'}}
       New ticket
     {{/link-to}}
+
+    {{#if session.isAuthenticated}}
+      <a href="#" {{action 'logout'}}>Logout</a>
+    {{else}}
+      {{#link-to 'app.login'}}Login{{/link-to}}
+    {{/if}}
   </div>
 </div>

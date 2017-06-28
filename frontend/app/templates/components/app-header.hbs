@@ -5,14 +5,14 @@
     </h1>
   {{/link-to}}
   <div class="links">
-    {{#link-to 'app.tickets'}}
-      My tickets
-    {{/link-to}}
-    {{#link-to 'app.tickets.new'}}
-      New ticket
-    {{/link-to}}
 
     {{#if session.isAuthenticated}}
+      {{#link-to 'app.tickets'}}
+        My tickets
+      {{/link-to}}
+      {{#link-to 'app.tickets.new'}}
+        New ticket
+      {{/link-to}}
       <a href="#" {{action 'logout'}}>Logout</a>
     {{else}}
       {{#link-to 'app.login'}}Login{{/link-to}}

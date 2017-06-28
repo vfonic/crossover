@@ -8,9 +8,14 @@ export default Ember.Component.extend({
   actions: {
     authenticate: function() {
       let { identification, password } = this.getProperties('identification', 'password');
-      return this.get('session').authenticate('authenticator:devise', identification, password).catch((reason) => {
-        this.set('errorMessage', reason.error);
-      });
+      return this.get('session').authenticate('authenticator:devise', identification, password)
+        .then((user) => {
+          console.log('user');
+          console.log(user);
+        })
+        .catch((reason) => {
+          this.set('errorMessage', reason.error);
+        });
     }
   }
 });

@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "ember-cli-rails"
 gem 'devise'
 gem 'rack-cors', require: 'rack/cors'
+gem "active_model_serializers", "~> 0.10.2"

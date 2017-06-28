@@ -117,8 +117,8 @@ p {
 .list-filter input {
     padding: 11px;
     font-size: 18px;
-    width: 500px;
-    margin: 50px auto;
+    /*width: 500px;
+    margin: 50px auto;*/
     background-color: rgba(255, 255, 255, 0.75);
     border: solid 1px lightgray;
     display: block;
@@ -214,6 +214,7 @@ p {
 
 .listing:hover {
     background-color: #f3f3f3;
+    cursor: pointer;
 }
 
 .listing img {

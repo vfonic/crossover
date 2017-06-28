@@ -1,11 +1,10 @@
-<form {{action "authenticate" on="submit"}}>
-  <label for="identification">Login</label>
+<form class="list-filter" {{action "authenticate" on="submit"}}>
+  <br>
   {{input value=identification placeholder="Email"}}
-
-  <label for="password">Password</label>
+  <br>
   {{input value=password type="password" placeholder="Password"}}
-
-  <button type="submit">Login</button>
+  <br>
+  <button type="submit" class="button">Login</button>
 </form>
 
 {{#if errorMessage}}

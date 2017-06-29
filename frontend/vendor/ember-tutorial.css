@@ -79,7 +79,9 @@ p {
     background-color: #05526A;
     background-color: #e46855;
 }
-
+.admin .menu {
+    background-color: #05526A;
+}
 .menu h1 {
     padding: 7px 0 0 20px;
     color: #f9f9f9;

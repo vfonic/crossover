@@ -1,0 +1,11 @@
+<div class="container">
+  {{#if currentUser.user.admin}}
+    {{admin-header logout=(action 'logout')}}
+  {{else}}
+    {{app-header logout=(action 'logout')}}
+  {{/if}}
+  <div class="body">
+    <h1>a{{currentUser.user.email}}a</h1>
+    {{outlet}}
+  </div>
+</div>

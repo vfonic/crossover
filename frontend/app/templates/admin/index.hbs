@@ -4,12 +4,6 @@
   <p>
     We hope you find exactly what you're looking for in a place to stay.
   </p>
-
-  {{#if session.isAuthenticated}}
-    {{#link-to 'admin.tickets.new' class="button"}}New ticket{{/link-to}}
-  {{else}}
-    {{#link-to 'admin.login' class="button"}}New ticket{{/link-to}}
-  {{/if}}
 </div>
 
 {{outlet}}

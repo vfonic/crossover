@@ -1,21 +1,6 @@
 {{#if tickets}}
   {{#each tickets as |ticket|}}
-    <article class="listing">
-      <h3>{{ticket.title}}</h3>
-      <div class="detail">
-        {{ticket.description}}
-      </div>
-      <div class="detail">
-        Status: {{ticket.status}}
-      </div>
-      {{#if currentUser.user.admin}}
-      <div class="detail">
-        {{#link-to 'admin.tickets.edit' ticket class="button"}}
-          Answer
-        {{/link-to}}
-      </div>
-      {{/if}}
-    </article>
+    {{ticket-show ticket=ticket}}
   {{/each}}
 {{else}}
   <article class="listing">

@@ -13,7 +13,7 @@ module Api
     end
 
     def create
-      @ticket = current_user.tickets.new(ticket_params)
+      @ticket = current_user.tickets.new(new_ticket_params)
 
       if @ticket.save
         render jsonapi: @ticket, status: :created
@@ -23,7 +23,7 @@ module Api
     end
 
     def update
-      if @ticket.update(ticket_params)
+      if @ticket.update(answer_ticket_params)
         render jsonapi: @ticket, status: :ok
       else
         render jsonapi: @ticket.errors, status: :unprocessable_entity
@@ -43,8 +43,12 @@ module Api
         @ticket = Ticket.find(params[:id])
       end
 
-      def ticket_params
+      def new_ticket_params
         ActiveModelSerializers::Deserialization.jsonapi_parse!(params, only: [:title, :description])
+      end
+
+      def answer_ticket_params
+        ActiveModelSerializers::Deserialization.jsonapi_parse!(params, only: [:answer, :status])
       end
   end
 end

@@ -1,0 +1,12 @@
+<form class="list-filter" {{action "save" ticket on="submit"}}>
+  <br>
+
+  <br>
+  {{textarea rows=7 cols=70 value=ticket.description placeholder="Please describe your issue"}}
+  <br>
+  <button type="submit" class="button">Submit</button>
+</form>
+
+{{#if errorMessage}}
+  {{errorMessage}}
+{{/if}}

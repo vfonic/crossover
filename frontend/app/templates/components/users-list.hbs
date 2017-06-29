@@ -5,11 +5,6 @@
       <div class="detail">
         {{if user.admin 'Admin' 'User'}}
       </div>
-      <div class="detail">
-        {{#link-to 'admin.users.edit' user class="button"}}
-          Edit
-        {{/link-to}}
-      </div>
     </article>
   {{/each}}
 {{else}}

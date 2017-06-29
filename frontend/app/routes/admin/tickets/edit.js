@@ -7,7 +7,8 @@ export default Ember.Route.extend({
 
   actions: {
     save(ticket) {
-      ticket.save().then(() => this.transitionTo('tickets'));
+      ticket.set('status', 'closed');
+      ticket.save().then(() => this.transitionTo('admin.tickets'));
     },
 
     willTransition(transition) {

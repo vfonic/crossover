@@ -14,5 +14,19 @@
         {{/link-to}}
       </div>
     {{/if}}
+  {{else}}
+    {{#if showViewButton}}
+      {{#link-to 'app.tickets.show' ticket class="button"}}
+        View
+      {{/link-to}}
+    {{/if}}
+  {{/if}}
+
+  {{#if ticket.answer}}
+    <div class="detail">
+      <strong>
+        Answer: {{ticket.answer}}
+      </strong>
+    </div>
   {{/if}}
 </article>

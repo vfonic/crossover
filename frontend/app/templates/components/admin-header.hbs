@@ -5,13 +5,15 @@
     </h1>
   {{/link-to}}
   <div class="links">
-    {{#if session.isAuthenticated}}
-      {{#link-to 'admin.tickets'}}
-        My tickets
-      {{/link-to}}
-      <a href="#" {{action 'logout'}}>Logout {{currentUser.user.email}}</a>
-    {{else}}
-      {{#link-to 'admin.login'}}Login{{/link-to}}
-    {{/if}}
+    {{#link-to 'admin.tickets'}}
+      Tickets
+    {{/link-to}}
+    {{#link-to 'admin.reports'}}
+      Reports
+    {{/link-to}}
+    {{#link-to 'admin.users'}}
+      Users
+    {{/link-to}}
+    <a href="#" {{action 'logout'}}>Logout {{currentUser.user.email}}</a>
   </div>
 </div>

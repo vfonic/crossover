@@ -3,7 +3,12 @@ module Api
     before_action :set_ticket, only: [:update, :destroy]
 
     def index
-      @tickets = current_user.tickets
+      if current_user.admin?
+        @tickets = Ticket.all
+      else
+        @tickets = current_user.tickets
+      end
+
       render jsonapi: @tickets
     end
 

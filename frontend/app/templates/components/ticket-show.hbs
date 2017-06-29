@@ -7,10 +7,12 @@
     Status: {{ticket.status}}
   </div>
   {{#if currentUser.user.admin}}
-  <div class="detail">
-    {{#link-to 'admin.tickets.edit' ticket class="button"}}
-      Answer
-    {{/link-to}}
-  </div>
+    {{#if ticket.isOpen}}
+      <div class="detail">
+        {{#link-to 'admin.tickets.edit' ticket class="button"}}
+          Answer
+        {{/link-to}}
+      </div>
+    {{/if}}
   {{/if}}
 </article>

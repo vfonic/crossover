@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('admin', { path: '/admin' }, function() {
     this.route('tickets', function() {
       this.route('show');
+      this.route('edit');
     });
     this.route('reports', function() {
       this.route('show', { path: '/:id' });
